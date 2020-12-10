@@ -1,0 +1,43 @@
+    .header {
+        // padding: 3px 0;
+        background-color: $gray-1000;
+    }
+    
+    .header__logo {
+        width: 120px;
+        height: 24px;
+    }
+    
+    .header__navlink {
+        font-size: 1.5rem;
+        color: $white;
+        line-height: 1.5;
+        padding: .5rem;
+        margin: .5rem;
+        &:hover {
+            color: $primary;
+        }
+        &--signin {
+            @extend .header__navlink;
+            color: $secondary;
+            background-color: $primary;
+            border-radius: 4px;
+            border: 1px solid $secondary;
+            padding: 8px 16px;
+            font-weight: 500;
+            &:hover {
+                border: 1px solid $primary;
+                background-color: $secondary;
+            }
+        }
+        &--login {
+            @extend .header__navlink;
+            color: $primary;
+            border-radius: 4px;
+            border: 1px solid $secondary;
+            padding: 8px 16px;
+            &:hover {
+                border: 1px solid $primary;
+            }
+        }
+    }

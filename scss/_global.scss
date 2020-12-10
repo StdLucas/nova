@@ -1,0 +1,81 @@
+    * {
+        box-sizing: border-box;
+    }
+    
+    html {
+        scroll-behavior: smooth;
+        font-size: 62.5%;
+        // @media screen and (min-width: 0px) {
+        //     font-size: 57.5%;
+        // }
+        // @media screen and (min-width: 576px) {
+        //     font-size: 57.5%;
+        // }
+        // @media screen and (min-width: 768px) {
+        //     font-size: 62.5%;
+        // }
+        @media screen and (min-width: 992px) {
+            font-size: 62.5%;
+        }
+        @media screen and (min-width: 1440px) {
+            font-size: 82.5%;
+        }
+    }
+    
+    h1 {
+        @include fc(60px, $primary)
+    }
+    
+    h2 {
+        @include fc(60px, $primary)
+    }
+    
+    h3 {
+        @include fc(3rem, $primary)
+    }
+    
+    h4 {
+        @include fc(24px, $primary)
+    }
+    
+    h5 {
+        @include fc(2rem, $primary)
+    }
+    
+    h6 {
+        @include fc(2rem, $primary)
+    }
+    
+    p {
+        font-size: 1.6rem;
+        line-height: 150%;
+        color: $gray-700;
+    }
+    
+    .text-bold {
+        font-family: 'ProximaNova-Bold';
+    }
+    
+    .text-ligth {
+        font-family: 'ProximaNova-Ligth';
+    }
+    
+    body {
+        font-family: 'ProximaNova-Regular', 'Commissioner', sans-serif;
+        background: $gray-100;
+        box-sizing: border-box;
+        width: 100%;
+        height: 100%;
+        position: relative;
+    }
+    
+    a,
+    a:visited,
+    a:hover {
+        text-decoration: none;
+    }
+    
+    i {
+        opacity: .7;
+        margin-right: .5rem;
+    }

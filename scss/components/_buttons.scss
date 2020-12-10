@@ -1,0 +1,37 @@
+.btn-primary {
+    text-transform: uppercase;
+    background: transparent;
+    height: 40px;
+    width: 250px;
+    padding: 20px;
+    border: 1.7px solid $primary;
+    transition: all 0.5s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @include fc(14px, $primary);
+    &:hover,
+    &:focus,
+    &:active {
+        border-radius: 5rem;
+        border-color: transparent;
+        background-color: $primary;
+        outline: none;
+        color: $white;
+    }
+}
+
+.btn-secondary {
+    @extend .btn-primary;
+    @include fc(14px, $white);
+    background-color: $primary;
+    &:hover,
+    &:focus,
+    &:active {
+        border-radius: 5rem;
+        border-color: $primary;
+        background-color: transparent;
+        outline: none;
+        @include fc(1.6, $primary)
+    }
+}

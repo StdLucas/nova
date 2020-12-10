@@ -1,0 +1,48 @@
+.carousel__card {
+    height: 100%;
+    min-height: 300px;
+    position: relative;
+    text-align: center;
+    border-radius: 5px;
+    border: none;
+    &:hover {
+        box-shadow: 0px 1px 20px 0px rgba(0, 0, 0, 0.05);
+    }
+    &--ahorro {
+        background-image: url(https://statictc.oss-cn-hangzhou.aliyuncs.com/binance_cloud/static/homepage/bg1.jpg?v=1);
+        background-size: cover;
+        background-position: center;
+    }
+    &--mep {
+        background-image: url(https://labs.binance.com/wp-content/uploads/2020/05/binance_labs_bg_yellow.jpg);
+        background-size: cover;
+        // background-position: center;
+    }
+    &--three {
+        background-image: url(https://static.binance.us/static/media/homeback.aa898f2c.svg);
+        background-size: cover;
+        background-position: center;
+    }
+}
+
+.carousel__title {
+    font-size: 20px;
+    color: $primary;
+    margin: 0;
+}
+
+.carousel__text {
+    font-size: 15px;
+    color: $white;
+    padding: 25px 0;
+    margin: 0;
+}
+
+.steps {
+    h5 {
+        @include fc(14px, $primary)
+    }
+    .pasos p {
+        @include fc(14px, $gray-700)
+    }
+}

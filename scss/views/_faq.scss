@@ -1,0 +1,38 @@
+.card {
+    background-color: $gray-800;
+    border-radius: .5rem;
+}
+
+.card-header {
+    background-color: $gray-900;
+    padding: 0;
+    cursor: pointer;
+    &:hover {
+        background-color: $gray-1000;
+    }
+}
+
+.card__title {
+    @include fc(14px, $primary);
+    padding: 1rem 0.5rem 1rem 1.5rem;
+    width: 100%;
+    display: inline-block;
+    cursor: pointer;
+    &:hover,
+    &:focus,
+    &:visited {
+        color: $primary;
+        background-color: transparent;
+        text-decoration: none;
+        outline: none;
+    }
+    &[aria-expanded='true'] i {
+        transform: rotate(180deg);
+    }
+}
+
+.card-body p {
+    @include fc(13px, $gray-400);
+    line-height: 155%;
+    margin: .5px 1rem;
+}

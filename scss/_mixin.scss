@@ -1,0 +1,5 @@
+// Mixin font-size and color
+@mixin fc ($font-size, $color) {
+    font-size: $font-size;
+    color: $color;
+}

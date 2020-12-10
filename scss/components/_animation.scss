@@ -1,0 +1,14 @@
+@keyframes slideInUpSm {
+    from {
+        transform: translate3d(0, 100px, 0);
+        visibility: visible;
+    }
+    to {
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+.slideInUpSm {
+    animation-name: slideInUpSm;
+    animation-duration: 1.25s;
+}

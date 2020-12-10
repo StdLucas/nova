@@ -1,0 +1,30 @@
+.hero__jumbotron {
+    background-color: transparent;
+    & span {
+        @include fc(24px, $white)
+    }
+}
+
+.hero__title {
+    @include fc(54px, $primary)
+}
+
+.hero__subtitle {
+    @include fc(24px, $primary)
+}
+
+.hero__description {
+    @include fc(18px, $white)
+}
+
+.hero__tax {
+    @include fc(13px, $white)
+}
+
+.hero__divider {
+    border: 1px solid rgba(255, 255, 255, 0.8);
+}
+
+.hero_smoothScroll {
+    @include fc(7rem, $white)
+}
