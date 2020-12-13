@@ -46,3 +46,18 @@
         @include fc(14px, $gray-700)
     }
 }
+
+.funnel {
+    .row {
+        background-image: url(../../assets/img/involved.jpg);
+        background-size: cover;
+        background-position: center;
+        color: $white;
+    }
+    &__title {
+        @include fc(2.3rem, $gray-100);
+    }
+    &__description {
+        @include fc(2rem, $gray-400)
+    }
+}

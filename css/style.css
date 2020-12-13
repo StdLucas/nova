@@ -415,6 +415,20 @@ i {
   font-size: 14px;
   color: #474D57; }
 
+.funnel .row {
+  background-image: url(../../assets/img/involved.jpg);
+  background-size: cover;
+  background-position: center;
+  color: #fff; }
+
+.funnel__title {
+  font-size: 2.3rem;
+  color: #f8f9fa; }
+
+.funnel__description {
+  font-size: 2rem;
+  color: #ced4da; }
+
 .card {
   background-color: #343a40;
   border-radius: .5rem; }
