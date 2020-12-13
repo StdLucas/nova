@@ -38,12 +38,19 @@
     margin: 0;
 }
 
-.steps {
-    h5 {
-        @include fc(14px, $primary)
+.help {
+    border-radius: 1rem;
+    &__container {
+        max-width: 29rem;
     }
-    .pasos p {
-        @include fc(14px, $gray-700)
+    &__title {
+        @include fc(2.3rem, $primary)
+    }
+    &__description {
+        @include fc(1.5rem, $gray-400)
+    }
+    &__anchor {
+        max-width: 29rem;
     }
 }
 
