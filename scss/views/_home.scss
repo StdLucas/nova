@@ -39,15 +39,15 @@
 }
 
 .help {
-    border-radius: 1rem;
+    // border-radius: 1rem;
     &__container {
         max-width: 29rem;
     }
     &__title {
-        @include fc(2.3rem, $primary)
+        @include set-font(2.3rem, $primary)
     }
     &__description {
-        @include fc(1.5rem, $gray-400)
+        @include set-font(1.5rem, $gray-400)
     }
     &__anchor {
         max-width: 29rem;
@@ -62,9 +62,9 @@
         color: $white;
     }
     &__title {
-        @include fc(2.3rem, $gray-100);
+        @include set-font(2.3rem, $gray-100);
     }
     &__description {
-        @include fc(2rem, $gray-400)
+        @include set-font(2rem, $gray-400)
     }
 }
