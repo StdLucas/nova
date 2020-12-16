@@ -22,3 +22,19 @@
     width: auto;
     height: 100vh;
 }
+
+.bg-dark {
+    background-color: $gray-1000 !important;
+    &-t {
+        @extend .bg-dark;
+        padding-top: 6rem !important;
+    }
+}
+
+.bg-light {
+    background-color: $gray-900 !important;
+    &-r {
+        @extend .bg-light;
+        border-radius: 1rem;
+    }
+}
