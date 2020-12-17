@@ -13,7 +13,7 @@
 }
 
 .card__title {
-    @include fc(14px, $primary);
+    @include set-font(14px, $primary);
     padding: 1rem 0.5rem 1rem 1.5rem;
     width: 100%;
     display: inline-block;
@@ -32,7 +32,7 @@
 }
 
 .card-body p {
-    @include fc(13px, $gray-400);
+    @include set-font(13px, $gray-400, none);
     line-height: 155%;
     margin: .5px 1rem;
 }
