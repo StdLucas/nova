@@ -1,25 +1,30 @@
 .form {
-    margin: 0;
-    padding: 0;
+    height: 100vh;
+    @include set-mq(xsmall) {
+        overflow-y: auto !important;
+    }
+    &>.row {
+        @include set-mq (xsmall) {
+            padding: 18px 0 36px 0!important;
+        }
+        @include set-mq (small) {
+            height: 100vh;
+        }
+    }
 }
 
 .form__container {
     position: relative;
     width: 100%;
     max-width: 384px;
-    margin: 10px auto;
-    padding: 40px 24px;
-    border-radius: 4px;
-    background-color: $white;
-    @media screen and (min-width: 576px) {
-        margin: 40px auto 24px;
+    // margin: 10px auto;
+    padding: 30px 24px;
+    border-radius: 1rem;
+    // background-color: $white;
+    @include set-mq (small) {
+        // margin: 40px auto 24px;
         box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.08), 0px 0px 2px rgba(0, 0, 0, 0.08);
     }
-}
-
-.form__description {
-    font-size: 1.1rem;
-    color: $gray-700;
 }
 
 .form__top {
@@ -27,9 +32,12 @@
 }
 
 .form__title {
-    font-size: 2.4rem;
-    color: $secondary;
+    @include set-font(24px, $primary);
     margin-bottom: 12px;
+}
+
+.form__description {
+    @include set-font(12px, $gray-400, none);
 }
 
 .form__containerInput {
@@ -38,26 +46,23 @@
 }
 
 .form__label {
+    @include set-font (12px, $gray-400, none);
     margin: 0;
-    font-size: 1.1rem;
-    color: $gray-700;
 }
 
 .form__input {
+    @include set-font(14px, $secondary, none);
+    @include set-border(1px, $secondary, 10px);
     width: 100%;
     height: 40px;
-    color: $secondary;
-    font-size: 1.4rem;
     padding: 0 8px;
-    outline: none;
     margin-top: 4px;
-    border: 1px solid transparent;
-    border-color: $gray-200;
-    border-radius: 4px;
+    outline: none;
     transition: all 1s;
-    &:hover {
-        border: 1px solid $primary;
-        border-radius: 10px;
+    &:hover,
+    &:focus,
+    &:active {
+        @include set-border(2px, $primary, 10px);
         outline: none;
     }
 }
@@ -68,49 +73,33 @@
     padding: 5px;
 }
 
-.form__button--primary {
-    width: 100%;
-    height: 40px;
-    font-weight: 500;
-    font-size: 1.4rem;
-    color: $secondary;
-    padding: 4px 8px;
-    text-decoration: none;
-    outline: none;
-    background-color: $primary;
-    border: none;
-    border-radius: 4px;
-    transition: all .5s;
-    &:hover {
-        background-color: $yellow-100;
-        border-radius: 20px;
-    }
-}
-
 .form__bottom {
     margin-top: 28px;
-    a {
-        color: $primary;
-        transition: all .5s;
-        &:hover {
-            color: $yellow-100;
-            text-decoration: underline;
-        }
-    }
-    .form__button--secondary {
-        width: 100%;
-        margin: 20px 0;
-        text-decoration: none;
-        outline: none;
-        font-weight: 500;
-        font-size: 1.4rem;
-        color: $primary;
-        &:hover {
-            color: $primary;
-            text-decoration: none;
-        }
-        & i {
-            font-size: 15px;
-        }
-    }
+    // a {
+    //     color: $primary;
+    //     transition: all .5s;
+    //     &:hover {
+    //         color: $yellow-100;
+    // text-decoration: underline;
 }
+
+// }
+// .form__button--secondary {
+//     width: 100%;
+//     margin: 20px 0;
+//     text-decoration: none;
+//     outline: none;
+//     font-weight: 500;
+//     font-size: 1.4rem;
+//     color: $primary;
+//     &:hover {
+//         color: $primary;
+//         text-decoration: none;
+//     }
+//     & i {
+//         font-size: 15px;
+//     }
+// }
+// }
+// 
+// }
