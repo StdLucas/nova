@@ -1,10 +1,11 @@
 @keyframes slideInUpSm {
     from {
-        transform: translate3d(0, 100px, 0);
-        visibility: visible;
+        transform: translate3d(0, 75px, 0);
+        visibility: hidden;
     }
     to {
         transform: translate3d(0, 0, 0);
+        visibility: visible;
     }
 }
 

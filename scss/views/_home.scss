@@ -1,48 +1,114 @@
-.carousel__card {
-    height: 100%;
-    min-height: 300px;
-    position: relative;
-    text-align: center;
-    border-radius: 5px;
+.carousel:hover {
+    border-radius: 1rem;
+    box-shadow: 0px 1px 5px 0px rgba(250, 185, 11, .5);
+}
+
+.options__card {
+    height: 425px;
+    border-radius: 1rem;
     border: none;
-    &:hover {
-        box-shadow: 0px 1px 20px 0px rgba(0, 0, 0, 0.05);
-    }
-    &--ahorro {
-        background-image: url(https://statictc.oss-cn-hangzhou.aliyuncs.com/binance_cloud/static/homepage/bg1.jpg?v=1);
-        background-size: cover;
-        background-position: center;
+    background-position: center;
+    background-size: cover;
+    background-position-y: top;
+    background-attachment: fixed;
+    @include set-mq (xxlarge) {
+        height: 600px;
     }
     &--mep {
-        background-image: url(https://labs.binance.com/wp-content/uploads/2020/05/binance_labs_bg_yellow.jpg);
-        background-size: cover;
-        // background-position: center;
+        background-image: url(../../assets/img/mep.png);
     }
-    &--three {
-        background-image: url(https://static.binance.us/static/media/homeback.aa898f2c.svg);
+    &--oficial {
+        background-image: url(../../assets/img/oficial.png);
+    }
+}
+
+.options__title {
+    @include set-font(20px, $primary);
+    @include set-mq(small) {
+        @include set-font (22px, $primary);
+    }
+    @include set-mq(medium) {
+        @include set-font (26px, $primary);
+    }
+    @include set-mq(large) {
+        @include set-font (26px, $primary);
+    }
+    @include set-mq(xxlarge) {
+        @include set-font (34px, $primary);
+    }
+}
+
+.options__description {
+    @include set-font(14px, $white);
+    @include set-mq(small) {
+        @include set-font (16px, $white);
+    }
+    @include set-mq(xxlarge) {
+        @include set-font (26px, $white);
+    }
+}
+
+.options__subtitle {
+    @include set-font(16px, $primary);
+    @include set-mq(medium) {
+        @include set-font (20px, $primary);
+    }
+    @include set-mq(xxlarge) {
+        @include set-font (30px, $primary);
+    }
+}
+
+.options__price {
+    @include set-font(16px, $white);
+    @include set-mq(medium) {
+        @include set-font (20px, $white);
+    }
+    @include set-mq(xxlarge) {
+        @include set-font (28px, $white);
+    }
+}
+
+.options__tax {
+    @include set-font(12px, $white, none);
+    @include set-mq(small) {
+        @include set-font (14px, $white, none);
+    }
+    @include set-mq(xxlarge) {
+        @include set-font (20px, $white, none);
+    }
+}
+
+.options__divider {
+    border: 1px solid rgba(255, 255, 255, 0.8);
+}
+
+.help {
+    // border-radius: 1rem;
+    &__container {
+        min-width: 25rem;
+    }
+    &__title {
+        @include set-font(20px, $primary)
+    }
+    &__description {
+        @include set-font(14px, $gray-400, none);
+        @include set-mq(xxlarge) {
+            @include set-font(18px, $gray-400);
+        }
+    }
+}
+
+.funnel {
+    .row {
+        background-image: url(../../assets/img/involved.png);
         background-size: cover;
         background-position: center;
+        color: $white;
     }
-}
-
-.carousel__title {
-    font-size: 20px;
-    color: $primary;
-    margin: 0;
-}
-
-.carousel__text {
-    font-size: 15px;
-    color: $white;
-    padding: 25px 0;
-    margin: 0;
-}
-
-.steps {
-    h5 {
-        @include fc(14px, $primary)
+    &__title {
+        @include set-font(2.3rem, $gray-100);
     }
-    .pasos p {
-        @include fc(14px, $gray-700)
+    &__description {
+        @include set-font(2rem, $gray-400)
     }
 }

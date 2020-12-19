@@ -1,30 +1,92 @@
-.hero__jumbotron {
-    background-color: transparent;
-    & span {
-        @include fc(24px, $white)
+.hero {
+    @include set-mq(xsmall) {
+        height: calc(100vh - 90px);
+    }
+    @include set-mq(small) {
+        height: 100vh;
+    }
+    background-position: center;
+    background-size: cover;
+    background-position-y: top;
+    background-attachment: fixed;
+    &--mep {
+        background-image: url(../../assets/img/mep.png);
+    }
+    &--oficial {
+        background-image: url(../../assets/img/oficial.png);
     }
 }
 
 .hero__title {
-    @include fc(54px, $primary)
-}
-
-.hero__subtitle {
-    @include fc(24px, $primary)
+    @include set-font(32px, $primary);
+    @include set-mq(small) {
+        @include set-font (38px, $primary);
+    }
+    @include set-mq(large) {
+        @include set-font (54px, $primary);
+    }
+    @include set-mq(xxlarge) {
+        @include set-font (62px, $primary);
+    }
 }
 
 .hero__description {
-    @include fc(18px, $white)
+    @include set-font(14px, $white);
+    @include set-mq(small) {
+        @include set-font (18px, $white);
+    }
+    @include set-mq(xxlarge) {
+        @include set-font (26px, $white);
+    }
+}
+
+.hero__subtitle {
+    @include set-font(18px, $primary, uppercase, 600);
+    @include set-mq(medium) {
+        @include set-font (22px, $primary, uppercase, 600);
+    }
+    @include set-mq(xxlarge) {
+        @include set-font (32px, $primary, uppercase, 600);
+    }
+}
+
+.hero__price {
+    @include set-font(18px, $white);
+    @include set-mq(medium) {
+        @include set-font (22px, $white);
+    }
+    @include set-mq(xxlarge) {
+        @include set-font (30px, $white);
+    }
 }
 
 .hero__tax {
-    @include fc(13px, $white)
+    @include set-font(12px, $white, none);
+    @include set-mq(small) {
+        @include set-font (14px, $white, none);
+    }
+    @include set-mq(xxlarge) {
+        @include set-font (20px, $white, none);
+    }
 }
 
 .hero__divider {
     border: 1px solid rgba(255, 255, 255, 0.8);
 }
 
-.hero_smoothScroll {
-    @include fc(7rem, $white)
+.fa-chevron-down {
+    font-size: 6.5rem;
+    color: $primary;
+    opacity: 1;
+    margin: 0;
+    transition: all .5s;
+    outline: none;
+    &:hover,
+    &:focus,
+    &:active {
+        color: $primary-light;
+    }
+    @include set-mq(xxlarge) {
+        font-size: 90px;
+    }
 }

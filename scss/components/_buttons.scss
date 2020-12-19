@@ -1,37 +1,86 @@
-.btn-primary {
+%btn__primary {
+    display: inline-block;
     text-transform: uppercase;
     background: transparent;
+    text-decoration: none;
+    text-transform: none;
     height: 40px;
-    width: 250px;
+    width: 100%;
+    max-width: 250px;
     padding: 20px;
     border: 1.7px solid $primary;
     transition: all 0.5s;
     display: flex;
     align-items: center;
     justify-content: center;
-    @include fc(14px, $primary);
+    transition: all .5s;
+    outline: none;
+    @include set-font(1.4rem, $primary);
+}
+
+.btn__primary {
+    @extend %btn__primary;
     &:hover,
     &:focus,
     &:active {
-        border-radius: 5rem;
-        border-color: transparent;
+        @include set-border(inherit, $gray-1000 !important, 2rem);
+        @include set-buttonstate($gray-1000, $primary!important);
+        box-shadow: 0 0 0 0.2rem rgba(240, 185, 11, .5);
+    }
+    &--solid {
+        @extend %btn__primary;
+        @include set-font(1.4rem, $gray-1000);
+        @include set-border(inherit, transparent, 1rem);
+        padding: 4px 8px;
         background-color: $primary;
-        outline: none;
-        color: $white;
+        max-width: none;
+        &:hover,
+        &:focus,
+        &:active {
+            @include set-border(inherit, $primary, 2rem);
+            @include set-buttonstate ($gray-1000, $primary-light);
+            box-shadow: 0 0 0 0.2rem rgba(18, 22, 18, .25);
+        }
     }
 }
 
-.btn-secondary {
-    @extend .btn-primary;
-    @include fc(14px, $white);
-    background-color: $primary;
+.btn__secondary {
+    @extend %btn__primary;
+    background-color: $gray-1000;
     &:hover,
     &:focus,
     &:active {
-        border-radius: 5rem;
-        border-color: $primary;
-        background-color: transparent;
-        outline: none;
-        @include fc(1.6, $primary)
+        @include set-border(inherit, $gray-1000, 2rem);
+        @include set-buttonstate($gray-1000, transparent);
+        box-shadow: 0 0 0 0.2rem rgba(18, 22, 18, .25);
+    }
+}
+
+%btn__light {
+    @include set-font(16px, $primary, none);
+    padding: 0;
+    transition: all .5s;
+    display: inline;
+}
+
+.btn__light {
+    @extend %btn__light;
+    display: inline-block;
+    width: 100%;
+    &:hover,
+    &:focus,
+    &:active {
+        @include set-buttonstate($primary-light, transparent);
+        box-shadow: none;
+    }
+    &--small {
+        @extend %btn__light;
+        font-size: 12px;
+        &:hover,
+        &:focus,
+        &:active {
+            @include set-buttonstate($primary-light, transparent, underline);
+            box-shadow: none;
+        }
     }
 }

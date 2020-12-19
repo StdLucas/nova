@@ -1,5 +1,6 @@
 .bg--video {
     z-index: -99;
+    // filter: opacity(0.5);
 }
 
 @media (min-aspect-ratio: 16/9) {
@@ -17,27 +18,27 @@
 }
 
 .bg--overlay {
-    background-color: rgba(1, 1, 1, 0.6);
+    background-color: rgba(1, 1, 1, 0.5);
     z-index: -98;
     width: auto;
     height: 100vh;
 }
 
-.bg--img {
-    z-index: -99;
-    left: auto;
-}
-
-@media (min-aspect-ratio: 16/9) {
-    .bg--img {
-        width: 100%;
-        height: auto;
+.bg-dark {
+    background-color: $gray-1000 !important;
+    &-top {
+        @extend .bg-dark;
+        padding-top: 6rem !important;
+    }
+    &-transparent {
+        background-color: rgba($color: $gray-1000, $alpha: .75) !important;
     }
 }
 
-@media (max-aspect-ratio: 16/9) {
-    .bg--img {
-        width: auto;
-        height: 100%;
+.bg-light {
+    background-color: $gray-900 !important;
+    &-r {
+        @extend .bg-light;
+        border-radius: 1rem;
     }
 }

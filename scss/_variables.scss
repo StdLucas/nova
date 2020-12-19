@@ -1,9 +1,5 @@
 // Variables
-// $primary: #f0b90b !default;
-// $secondary: $gray-1000 !default;
-// $light-yellow: #F8D12F !default;
 $gray: #474D57 !default;
-// 
 // 
 $white: #fff !default;
 $gray-100: #f8f9fa !default;
@@ -39,3 +35,13 @@ $secondary: $gray-1000 !default;
 // $danger:        $red !default;
 // $light:         $gray-100 !default;
 // $dark:          $gray-800 !default;
+// 
+// 
+$set-breakpoint:( xsmall:0px, small:576px, medium:768px, large:992px, xlarge:1200px, xxlarge:1920px);
+// 
+// 
+// $font-size:( xs: 1.4rem, sm: 1.6rem, md: 1.8rem, lg: 2rem, xl: 2.2rem, xxl: 2.4rem);
+//
+// 
+// $title-size:( xs: 1.4rem, sm: 1.6rem, md: 1.8rem, lg: 2rem, xl: 2.2rem, xxl: 2.4rem);
+//

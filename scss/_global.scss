@@ -23,33 +23,34 @@
     }
     
     h1 {
-        @include fc(60px, $primary)
+        @include set-font(60px, $primary)
     }
     
     h2 {
-        @include fc(60px, $primary)
+        @include set-font(60px, $primary)
     }
     
     h3 {
-        @include fc(3rem, $primary)
+        @include set-font(3rem, $primary)
     }
     
     h4 {
-        @include fc(24px, $primary)
+        @include set-font(24px, $primary)
     }
     
     h5 {
-        @include fc(2rem, $primary)
+        @include set-font(2rem, $primary)
     }
     
     h6 {
-        @include fc(2rem, $primary)
+        @include set-font(2rem, $primary)
     }
     
     p {
         font-size: 1.6rem;
         line-height: 150%;
         color: $gray-700;
+        margin: 0;
     }
     
     .text-bold {
@@ -62,7 +63,7 @@
     
     body {
         font-family: 'ProximaNova-Regular', 'Commissioner', sans-serif;
-        background: $gray-100;
+        background: $gray-1000;
         box-sizing: border-box;
         width: 100%;
         height: 100%;
@@ -76,6 +77,6 @@
     }
     
     i {
-        opacity: .7;
+        // opacity: .7;
         margin-right: .5rem;
     }
