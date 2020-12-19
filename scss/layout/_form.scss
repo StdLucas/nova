@@ -1,14 +1,15 @@
 .form {
-    height: 100vh;
     @include set-mq(xsmall) {
-        overflow-y: auto !important;
+        overflow-y: auto;
     }
+    @include set-mq(small) {}
     &>.row {
         @include set-mq (xsmall) {
-            padding: 18px 0 36px 0!important;
+            padding: 18px 0 !important;
         }
         @include set-mq (small) {
             height: 100vh;
+            padding: 0 !important;
         }
     }
 }
