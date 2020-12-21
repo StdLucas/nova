@@ -18,7 +18,7 @@
 }
 
 .bg--overlay {
-    background-color: rgba(1, 1, 1, 0.5);
+    background-color: rgba(1, 1, 1, 0.55);
     z-index: -98;
     width: auto;
     height: 100vh;
@@ -31,7 +31,7 @@
         padding-top: 6rem !important;
     }
     &-transparent {
-        background-color: rgba($color: $gray-1000, $alpha: .75) !important;
+        background-color: rgba($gray-1000, 0.75) !important;
     }
 }
 

@@ -13,7 +13,7 @@
 }
 
 .card__title {
-    @include set-font(14px, $primary);
+    @include set-font(xs, $primary);
     padding: 1rem 0.5rem 1rem 1.5rem;
     width: 100%;
     display: inline-block;
@@ -21,18 +21,15 @@
     &:hover,
     &:focus,
     &:visited {
-        color: $primary;
-        background-color: transparent;
-        text-decoration: none;
-        outline: none;
+        @include set-pseudo($primary, transparent);
     }
-    &[aria-expanded='true'] i {
+    &[aria-expanded='false'] i {
         transform: rotate(180deg);
     }
 }
 
 .card-body p {
-    @include set-font(13px, $gray-400, none);
+    @include set-font(xs, $gray-400, none);
     line-height: 155%;
-    margin: .5px 1rem;
+    margin: .7rem 1rem;
 }

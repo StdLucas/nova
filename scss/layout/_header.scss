@@ -19,7 +19,6 @@
             padding: 8px 16px;
             &:hover {
                 @include set-border(1px, $primary, 4px);
-                border: 1px solid $primary;
                 background-color: $secondary;
             }
         }
@@ -27,7 +26,6 @@
             @extend .header__navlink;
             @include set-border(1px, $secondary, 4px);
             color: $primary;
-            border-radius: 4px;
             padding: 8px 16px;
             &:hover {
                 @include set-border(1px, $primary, 4px);

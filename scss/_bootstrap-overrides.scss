@@ -4,8 +4,7 @@
 }
 
 .text-muted {
-    font-size: 13px;
-    color: $gray-400 !important;
+    @include set-font(xs, $gray-400 !important, none);
     line-height: 1.5;
     &:hover,
     &:focus,
@@ -16,7 +15,7 @@
 }
 
 .popover-body {
-    font-size: 11px;
+    font-size: 1.1rem;
 }
 
 .row {

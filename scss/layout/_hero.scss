@@ -10,63 +10,63 @@
     background-position-y: top;
     background-attachment: fixed;
     &--mep {
-        background-image: url(../../assets/img/mep.png);
+        background-image: url(/assets/img/mep.png), url(/assets/img/mep.svg);
     }
     &--oficial {
-        background-image: url(../../assets/img/oficial.png);
+        background-image: url(/assets/img/oficial.png), url(/assets/img/oficial.svg);
     }
 }
 
 .hero__title {
-    @include set-font(32px, $primary);
+    @include set-font(3.2rem, $primary);
     @include set-mq(small) {
-        @include set-font (38px, $primary);
+        @include set-font (3.8rem, $primary);
     }
     @include set-mq(large) {
-        @include set-font (54px, $primary);
+        @include set-font (5.4rem, $primary);
     }
     @include set-mq(xxlarge) {
-        @include set-font (62px, $primary);
+        @include set-font (6.2rem, $primary);
     }
 }
 
 .hero__description {
-    @include set-font(14px, $white);
+    @include set-font(xs, $white);
     @include set-mq(small) {
-        @include set-font (18px, $white);
+        @include set-font (lg, $white);
     }
     @include set-mq(xxlarge) {
-        @include set-font (26px, $white);
+        @include set-font (xxl, $white);
     }
 }
 
 .hero__subtitle {
-    @include set-font(18px, $primary, uppercase, 600);
+    @include set-font(md, $primary, uppercase, 600);
     @include set-mq(medium) {
-        @include set-font (22px, $primary, uppercase, 600);
+        @include set-font (xl, $primary, uppercase, 600);
     }
     @include set-mq(xxlarge) {
-        @include set-font (32px, $primary, uppercase, 600);
+        @include set-font (3.2rem, $primary, uppercase, 600);
     }
 }
 
 .hero__price {
-    @include set-font(18px, $white);
+    @include set-font(md, $white);
     @include set-mq(medium) {
-        @include set-font (22px, $white);
+        @include set-font (xl, $white);
     }
     @include set-mq(xxlarge) {
-        @include set-font (30px, $white);
+        @include set-font (3.0rem, $white);
     }
 }
 
 .hero__tax {
-    @include set-font(12px, $white, none);
+    @include set-font(1.2rem, $white, none);
     @include set-mq(small) {
-        @include set-font (14px, $white, none);
+        @include set-font (xs, $white, none);
     }
     @include set-mq(xxlarge) {
-        @include set-font (20px, $white, none);
+        @include set-font (lg, $white, none);
     }
 }
 
@@ -77,7 +77,7 @@
 .fa-chevron-down {
     font-size: 6.5rem;
     color: $primary;
-    opacity: 1;
+    opacity: .8;
     margin: 0;
     transition: all .5s;
     outline: none;
@@ -87,6 +87,6 @@
         color: $primary-light;
     }
     @include set-mq(xxlarge) {
-        font-size: 90px;
+        font-size: 9rem;
     }
 }

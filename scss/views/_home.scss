@@ -23,35 +23,32 @@
 }
 
 .options__title {
-    @include set-font(20px, $primary);
+    @include set-font(xs, $primary);
     @include set-mq(small) {
-        @include set-font (22px, $primary);
+        @include set-font (lg, $primary);
     }
     @include set-mq(medium) {
-        @include set-font (26px, $primary);
-    }
-    @include set-mq(large) {
-        @include set-font (26px, $primary);
+        @include set-font (xxl, $primary);
     }
     @include set-mq(xxlarge) {
-        @include set-font (34px, $primary);
+        @include set-font (3.4rem, $primary);
     }
 }
 
 .options__description {
-    @include set-font(14px, $white);
+    @include set-font(sm, $white);
     @include set-mq(small) {
-        @include set-font (16px, $white);
+        @include set-font (md, $white);
     }
     @include set-mq(xxlarge) {
-        @include set-font (26px, $white);
+        @include set-font (xxl, $white);
     }
 }
 
 .options__subtitle {
-    @include set-font(16px, $primary);
+    @include set-font(sm, $primary);
     @include set-mq(medium) {
-        @include set-font (20px, $primary);
+        @include set-font (lg, $primary);
     }
     @include set-mq(xxlarge) {
         @include set-font (30px, $primary);
@@ -59,22 +56,22 @@
 }
 
 .options__price {
-    @include set-font(16px, $white);
+    @include set-font(sm, $white);
     @include set-mq(medium) {
-        @include set-font (20px, $white);
+        @include set-font (lg, $white);
     }
     @include set-mq(xxlarge) {
-        @include set-font (28px, $white);
+        @include set-font (2.8rem, $white);
     }
 }
 
 .options__tax {
-    @include set-font(12px, $white, none);
+    @include set-font(1.2rem, $white, none);
     @include set-mq(small) {
-        @include set-font (14px, $white, none);
+        @include set-font (xs, $white, none);
     }
     @include set-mq(xxlarge) {
-        @include set-font (20px, $white, none);
+        @include set-font (lg, $white, none);
     }
 }
 
@@ -88,27 +85,27 @@
         min-width: 25rem;
     }
     &__title {
-        @include set-font(20px, $primary)
+        @include set-font(lg, $primary)
     }
     &__description {
-        @include set-font(14px, $gray-400, none);
+        @include set-font(xs, $gray-400, none);
         @include set-mq(xxlarge) {
-            @include set-font(18px, $gray-400);
+            @include set-font(md, $gray-400);
         }
     }
 }
 
 .funnel {
     .row {
-        background-image: url(../../assets/img/involved.png);
+        background-image: url(/assets/img/involved.png), url(/assets/img/involved.svg);
         background-size: cover;
         background-position: center;
         color: $white;
     }
     &__title {
-        @include set-font(2.3rem, $gray-100);
+        @include set-font(xl, $gray-100);
     }
     &__description {
-        @include set-font(2rem, $gray-400)
+        @include set-font(lg, $gray-1000, none)
     }
 }

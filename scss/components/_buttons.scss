@@ -24,7 +24,7 @@
     &:focus,
     &:active {
         @include set-border(inherit, $gray-1000 !important, 2rem);
-        @include set-buttonstate($gray-1000, $primary!important);
+        @include set-pseudo($gray-1000, $primary!important);
         box-shadow: 0 0 0 0.2rem rgba(240, 185, 11, .5);
     }
     &--solid {
@@ -38,7 +38,7 @@
         &:focus,
         &:active {
             @include set-border(inherit, $primary, 2rem);
-            @include set-buttonstate ($gray-1000, $primary-light);
+            @include set-pseudo ($gray-1000, $primary-light);
             box-shadow: 0 0 0 0.2rem rgba(18, 22, 18, .25);
         }
     }
@@ -51,7 +51,7 @@
     &:focus,
     &:active {
         @include set-border(inherit, $gray-1000, 2rem);
-        @include set-buttonstate($gray-1000, transparent);
+        @include set-pseudo($gray-1000, transparent);
         box-shadow: 0 0 0 0.2rem rgba(18, 22, 18, .25);
     }
 }
@@ -70,7 +70,7 @@
     &:hover,
     &:focus,
     &:active {
-        @include set-buttonstate($primary-light, transparent);
+        @include set-pseudo($primary-light, transparent);
         box-shadow: none;
     }
     &--small {
@@ -79,7 +79,7 @@
         &:hover,
         &:focus,
         &:active {
-            @include set-buttonstate($primary-light, transparent, underline);
+            @include set-pseudo($primary-light, transparent, underline);
             box-shadow: none;
         }
     }

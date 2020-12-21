@@ -1,35 +1,42 @@
-    // Mixin font-size and color
-    @mixin set-font ($size, $color, $transform:uppercase, $weight:400, $family: 'ProximaNova-Regular') {
-        font-size: $size;
-        color: $color;
-        font-weight: $weight;
-        font-family: $family, 'Arial', 'Helvetica', sans-serif;
-        text-transform: $transform;
-    }
-    
-    @mixin set-border( $width, $color, $radius, $style:solid) {
-        border-width: $width;
-        border-color: $color;
-        border-radius: $radius;
-        border-style: $style;
-    }
-    
-    @mixin set-buttonstate( $color, $background, $t-decorate:none, $outline:none) {
-        color: $color;
-        background: $background;
-        outline: $outline;
-        text-decoration: $t-decorate
-    }
-    
-    @mixin set-mq ($breakpoint) {
-        @if map-has-key($set-breakpoint, $breakpoint) {
-            @media screen and (min-width: map-get($set-breakpoint, $breakpoint)) {
-                @content;
+            // Mixin border
+            @mixin set-border( $width, $color, $radius:0, $style:solid) {
+                border-width: $width;
+                border-color: $color;
+                border-radius: $radius;
+                border-style: $style;
             }
-        }
-        @else {
-            @media screen and (min-width: $breakpoint) {
-                @content;
+            
+            // Mixin Pseudo-classes
+            @mixin set-pseudo( $color, $background, $t-decorate:none, $outline:none) {
+                color: $color;
+                background: $background;
+                outline: $outline;
+                text-decoration: $t-decorate
             }
-        }
-    }
+            
+            // Mixin breakpoint
+            @mixin set-mq ($breakpoint) {
+                @if map-has-key($set-breakpoint, $breakpoint) {
+                    @media screen and (min-width: map-get($set-breakpoint, $breakpoint)) {
+                        @content;
+                    }
+                }
+                @else {
+                    @media screen and (min-width: $breakpoint) {
+                        @content;
+                    }
+                }
+            }
+            
+            // Mixin font
+            @mixin set-font ($breakpoint, $color, $transform:uppercase, $weight:400, $family: 'ProximaNova-Regular') {
+                @if map-has-key($set-font, $breakpoint) {
+                    font-size: map-get($set-font, $breakpoint)
+                }
+                @else {
+                    font-size: $breakpoint;
+                }
+                color: $color;
+                font-weight: $weight;
+                text-transform: $transform;
+            }

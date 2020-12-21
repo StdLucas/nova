@@ -40,8 +40,7 @@ $secondary: $gray-1000 !default;
 $set-breakpoint:( xsmall:0px, small:576px, medium:768px, large:992px, xlarge:1200px, xxlarge:1920px);
 // 
 // 
-// $font-size:( xs: 1.4rem, sm: 1.6rem, md: 1.8rem, lg: 2rem, xl: 2.2rem, xxl: 2.4rem);
+// $text-size:( xs: 1.4rem, sm: 1.6rem, md: 1.8rem, lg: 2rem, xl: 2.2rem, xxl: 2.4rem);
 //
 // 
-// $title-size:( xs: 1.4rem, sm: 1.6rem, md: 1.8rem, lg: 2rem, xl: 2.2rem, xxl: 2.4rem);
-//
+$set-font:(xs: 1.4rem, sm: 1.6rem, md: 1.8rem, lg: 2.0rem, xl: 2.2rem, xxl: 2.6rem);

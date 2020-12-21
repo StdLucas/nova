@@ -18,9 +18,8 @@
     }
     &:hover {
         @include set-border(1.8px, $primary, 50%);
+        @include set-pseudo($primary, $gray-1000);
         cursor: pointer;
-        background-color: $gray-1000;
-        color: $primary;
     }
     &:active {
         background-color: $gray-900;

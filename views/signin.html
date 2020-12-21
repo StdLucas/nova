@@ -66,11 +66,18 @@
                             <input class="form__input" type="email" id="signinMail" autocomplete="off" required>
                         </div>
 
-                        <div class="form__containerInput pb-3">
+                        <div class="form__containerInput">
                             <label class="form__label" for="singinPassword">Contraseña</label>
                             <input class="form__input" type="password" id="singinPassword" autocomplete="off" required data-toggle="popover" data-placement="top" data-content="Debe tener al menos 8 caracteres, 1 mayúscula, 1 minúscula y 1 número.">
                         </div>
 
+                        <div class="form__containerCheckbox px-3">
+                            <label class="form__label">
+                                <input type="checkbox" checked="checked">
+                                <span class="checkmark"></span>
+                                He leído y acepto los <a href="" class="btn__light--small">Términos y Condiciones de Servicio</a> de Nova.
+                            </label>
+                        </div>
                         <button class="btn btn__primary--solid mx-auto mt-5" type="submit">Crear Cuenta</button>
                     </form>
 
